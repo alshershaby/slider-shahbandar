@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap');
+
 *{
 padding: 0;
 margin: 0;
+}
+
+a,p{
+    font-family: "Beiruti", serif;
 }
 .slider{
     background-color:#FEF6E9;
@@ -8,3 +14,94 @@ margin: 0;
     height: 100vh;
 }
 
+.container{
+    width: 100%;
+    height: 100%;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.col{
+    width: 33%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.col-12{
+    width: 100%;
+}
+.inner-bookstypes{
+    width: 24%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.btn-read-more,.btn-add{
+    border: solid 2px #94389B;
+    color: #94389B;
+    border-radius: 4px;
+    padding: 12px 24px;
+    background-color:transparent;
+    cursor: pointer;
+    font-family: "Beiruti", serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s ease-in-out;
+}
+.btn-read-more:hover{
+    background-color: #94389B;
+    color: #fff;
+}
+.btn-read-more:hover span{
+    background-image: none;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.btn-read-more span{
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    transition: .4s ease-in-out;
+}
+.btn-add{
+    background-color: #94389B;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.btn-add:hover{
+background-color:#291E63;
+border: solid 2px #291E63; 
+}
+.btn-add span{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    transition: .4s ease-in-out;
+}
+.center{
+    background-image: url('./assets/Ellipse\ 5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 540px;
+}
+
+/* ------------------ */
