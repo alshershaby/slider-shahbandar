@@ -4,12 +4,11 @@
 padding: 0;
 margin: 0;
 }
+body{
 
-a,p{
-    font-family: "Beiruti", serif;
+    background-color:#FEF6E9;
 }
 .slider{
-    background-color:#FEF6E9;
     width: 100%;
     height: 100vh;
 }
@@ -26,8 +25,7 @@ a,p{
 }
 
 .col{
-    width: 33%;
-    padding: 12px;
+    width: 33.333%;
     box-sizing: border-box;
 }
 .col-12{
@@ -95,7 +93,7 @@ border: solid 2px #291E63;
     transition: .4s ease-in-out;
 }
 .center{
-    background-image: url('./assets/Ellipse\ 5.png');
+    background-image: url('./assets/Ellipse5.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -105,3 +103,87 @@ border: solid 2px #291E63;
 }
 
 /* ------------------ */
+.left .single-book{
+float: right;
+}
+.single-book{
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 90px 0 0 90px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: .4s ease-in-out;
+}
+
+.right .single-book{
+    border-radius: 0px 90px 90px 0px;
+    flex-direction: row-reverse;
+}
+.img-holder{
+    width: 100px;
+    height: 100px;
+    background-image: url('./assets/Ellipse5.png');
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s ease-in-out;
+}
+.img-holder img{
+    width: 90%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+    padding: 12px 24px ;
+    font-family: "Beiruti", serif;
+}
+
+h3{
+    text-align: right;
+    font-size: 28px;
+    font-family: "Beiruti", serif;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+.desc{
+    font-size: 12px;
+    text-align: right;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+.price{
+    font-size: 14px;
+}
+
+.active{
+    width: 90%;
+    background-color: #94389B;
+    color: #fff;
+} 
+
+
+@keyframes rotateOut {
+    0% { transform: rotate(0deg); opacity: 1; }
+    100% { transform: rotate(180deg); opacity: 0; }
+}
+
+@keyframes rotateIn {
+    0% { transform: rotate(-180deg); opacity: 0; }
+    100% { transform: rotate(0deg); opacity: 1; }
+}
+
+.single-book {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.single-book.active {
+    transform: scale(1.05);
+}
