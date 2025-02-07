@@ -3,9 +3,10 @@
 *{
 padding: 0;
 margin: 0;
+cursor: pointer;;
 }
 body{
-
+    overflow-x: hidden;
     background-color:#FEF6E9;
 }
 .slider{
@@ -22,21 +23,23 @@ body{
     flex-wrap: wrap;
     align-items: center;
     height: 100%;
+    justify-content: space-between;
 }
 
 .col{
-    width: 33.333%;
+    width: 30%;
     box-sizing: border-box;
 }
 .col-12{
     width: 100%;
 }
 .inner-bookstypes{
-    width: 24%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    margin-bottom: 20px;
 }
 .btn-read-more,.btn-add{
     border: solid 2px #94389B;
@@ -93,13 +96,24 @@ border: solid 2px #291E63;
     transition: .4s ease-in-out;
 }
 .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cta{
+    width: 100%;
+    margin: auto;
+}
+.center .center-image-holder{
     background-image: url('./assets/Ellipse5.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 540px;
+    width: 100%;
+    height: 500px;
 }
 
 /* ------------------ */
@@ -143,6 +157,7 @@ float: right;
     text-align: right;
     padding: 12px 24px ;
     font-family: "Beiruti", serif;
+    width: 50%;
 }
 
 h3{
@@ -186,4 +201,34 @@ h3{
 
 .single-book.active {
     transform: scale(1.05);
+}
+
+@media (max-width:768px) {
+    .content{
+        display: none;
+    }
+    .single-book{
+        width: 60%;
+    }
+    .img-holder{
+        width: 80px;
+        height: 80px;
+    }
+
+    .center{
+        height: auto;
+        background-size: contain;
+        background-position: center;
+    }
+    .center .center-image-holder{
+        width: 50%;
+        height: 100%;
+    }
+    .row{
+        justify-content: space-between;
+    }
+    .col{
+        width: 30%;
+        box-sizing: border-box;
+    }
 }
