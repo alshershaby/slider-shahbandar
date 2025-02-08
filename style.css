@@ -115,7 +115,9 @@ border: solid 2px #291E63;
     width: 100%;
     height: 500px;
 }
-
+.center-content{
+    display: none;
+}
 /* ------------------ */
 .left .single-book{
 float: right;
@@ -125,7 +127,7 @@ float: right;
     background-color: #fff;
     display: flex;
     border-radius: 90px 0 0 90px;
-    cursor: pointer;
+    cursor: pointer!important;
     margin-bottom: 16px;
     transition: .4s ease-in-out;
 }
@@ -230,5 +232,49 @@ h3{
     .col{
         width: 30%;
         box-sizing: border-box;
+    }
+    .center-content{
+        display: block;
+    }
+    .center-content .title, .center-content .desc,.center-content .price{
+        text-align: center;
+        padding-bottom: 20px;
+        font-family:"Beiruti", serif ;
+    }
+}
+
+@media (max-width:426px){
+    .center-content .title, .center-content .desc,.center-content .price{
+        text-align: center;
+        padding-bottom: 20px;
+        font-family: "Beiruti", serif;
+    }
+    .single-book{
+        width: 75%;
+    }
+    .img-holder{
+        height: 40px;
+        width: 50px;
+    }
+    .right,.left{
+        width: 25%!important;
+    }
+    .center{
+        width: 50%;
+    }
+    .center .center-image-holder{
+        width: 30%;
+        height: 300px;
+    }
+    .center .center-image-holder img{
+    width: 200px;
+    }   
+    .sub-slides{
+        display: none;
+    }
+    .btn-read-more, .btn-add{
+        width: 48%;
+        font-size: 12px;
+        padding: 8px ;
     }
 }
